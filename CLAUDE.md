@@ -14,7 +14,7 @@ Comedy enthusiasts currently face significant friction in discovering shows - th
 - **Deployment**: Ready for Vercel
 - **Package Manager**: npm
 
-## Project Status: Backend Complete ✅
+## Project Status: Backend Complete ✅ | Frontend In Progress 🚧
 
 ### Completed Features
 1. **Project Setup**
@@ -33,7 +33,18 @@ Comedy enthusiasts currently face significant friction in discovering shows - th
    - `GET /api/venues` - List venues (city filter, search, pagination)
    - `GET /api/shows` - List shows (city, date, comedian filters, pagination)
 
-4. **Type Safety**
+4. **Frontend Pages**
+   - Landing page with ComedyHub branding
+   - **Shows listing page** (`/shows`) with:
+     - Search by comedian name
+     - Filter by city and date
+     - Responsive card-based layout
+     - Pagination support
+     - Real-time API integration
+     - Loading and error states
+     - Dark mode support
+
+5. **Type Safety**
    - Complete TypeScript interfaces for all entities
    - Proper path aliases configured (@/* -> src/*)
 
@@ -119,6 +130,8 @@ src/
 │   │   ├── comedians/       # Comedian endpoints
 │   │   ├── shows/           # Show endpoints
 │   │   └── venues/          # Venue endpoints
+│   ├── shows/               # Shows listing page
+│   │   └── page.tsx         # Shows page with search/filters
 │   ├── globals.css          # Global styles
 │   ├── layout.tsx           # Root layout
 │   └── page.tsx             # Homepage
@@ -137,10 +150,10 @@ SUPABASE_SETUP.md           # Complete setup instructions
 ## Next Steps / Roadmap
 
 ### Immediate (Frontend)
-- [ ] Create show listing page with search/filters
-- [ ] Build comedian profile pages
+- [x] Create show listing page with search/filters
+- [ ] Build comedian profile pages  
 - [ ] Add venue detail pages
-- [ ] Implement responsive design
+- [ ] Link shows page from homepage navigation
 
 ### User Features
 - [ ] User authentication (Supabase Auth)
@@ -193,4 +206,4 @@ SUPABASE_SETUP.md           # Complete setup instructions
 - Development server: `http://localhost:3000`
 
 ---
-*Last updated: 2025-07-22 - Backend implementation complete*
+*Last updated: 2025-07-23 - Backend complete, Shows listing page implemented*

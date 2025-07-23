@@ -26,14 +26,17 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
               <div className="text-4xl mb-4">🔔</div>
               <h3 className="text-lg font-semibold mb-2">Get Alerts</h3>
-              <p className="text-gray-600 dark:text-gray-300">Receive personalized notifications for shows you won't want to miss.</p>
+              <p className="text-gray-600 dark:text-gray-300">Receive personalized notifications for shows you won&apos;t want to miss.</p>
             </div>
           </div>
           
           <div className="flex gap-4 justify-center">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-medium px-8 py-3 rounded-lg transition-colors">
+            <a
+              href="/shows"
+              className="bg-purple-600 hover:bg-purple-700 text-white font-medium px-8 py-3 rounded-lg transition-colors inline-block"
+            >
               Find Shows
-            </button>
+            </a>
             <button className="border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 font-medium px-8 py-3 rounded-lg transition-colors">
               Browse Comedians
             </button>

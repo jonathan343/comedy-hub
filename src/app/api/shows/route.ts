@@ -47,9 +47,9 @@ export async function GET(request: NextRequest) {
     // Filter by comedian if specified
     let filteredData = data
     if (comedian && data) {
-      filteredData = data.filter((show: any) =>
-        show.performers?.some((p: any) =>
-          p.comedian?.name.toLowerCase().includes(comedian.toLowerCase())
+      filteredData = data.filter((show: { performers?: { comedian?: { name?: string } }[] }) =>
+        show.performers?.some((p: { comedian?: { name?: string } }) =>
+          p.comedian?.name?.toLowerCase().includes(comedian.toLowerCase())
         )
       )
     }
